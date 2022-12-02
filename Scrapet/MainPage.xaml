@@ -10,5 +10,5 @@
             <RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
         </BlazorWebView.RootComponents>
     </BlazorWebView>-->
-    <WebView Source="https://google.com" Navigated="WebView_Navigated"></WebView>
+    <WebView Source="https://google.com" Navigating="WebView_Navigating" Navigated="WebView_Navigated" ></WebView>
 </ContentPage>

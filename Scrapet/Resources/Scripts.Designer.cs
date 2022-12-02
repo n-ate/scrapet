@@ -61,11 +61,98 @@ namespace Scrapet.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to alert(99); &quot;hi&quot;;.
+        ///   Looks up a localized string similar to /// &lt;reference path=&quot;intellisense.d.ts&quot; /&gt;
+        ///
+        ////**
+        /// * @param {Namespace} ns 
+        /// * @param {Object} self
+        /// */
+        ///function Events(ns, self) {
+        ///    
+        ///    self.clicks = [];
+        ///    document.addEventListener(&quot;click&quot;, function (ev) {
+        ///        let target = ev.originalTarget;
+        ///        ns.selection.
+        ///            clicks.push({
+        ///            });
+        ///    });
+        ///
+        ///    return self; //for intellisense
+        ///}.
         /// </summary>
-        internal static string Selection {
+        internal static string Events {
             get {
-                return ResourceManager.GetString("Selection", resourceCulture);
+                return ResourceManager.GetString("Events", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to window.__SCRAPET = (function (debug, registry) {
+        ///    let private = {
+        ///        _maxRegistrationMS: 2000,
+        ///        _expected: [...registry],
+        ///        _pending: [...registry],
+        ///        _registering: [],
+        ///        _namespace: { isDebug: debug },
+        ///        _destruct: function () {
+        ///            this._hide();
+        ///            public.Register = null; //remove public Register method
+        ///            private = null; //remove private members
+        ///        },
+        ///        _hide: function () {
+        ///            delete window.__SCRAPET; //remo [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Namespace {
+            get {
+                return ResourceManager.GetString("Namespace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ////**
+        /// * @param {Namespace} ns 
+        /// * @param  self
+        /// * @returns {{AttributeValueSelector:AttributeValueSelector, Attribute:Attribute, AttributeCollection:AttributeCollection }}
+        /// */function Selection(ns, self) {
+        ///    self.AttributeValueSelector = {
+        ///        CONTAINS: &quot;*=&quot;,
+        ///        ENDS_WITH: &quot;$=&quot;,
+        ///        EQUALS: &quot;=&quot;,
+        ///        HYPHEN_EQUALS: &quot;|=&quot;,
+        ///        SPACE_CONTAINS: &quot;~=&quot;,
+        ///        STARTS_WITH: &quot;^=&quot;,
+        ///        contains(value) {
+        ///            return value == CONTAINS ||
+        ///                value == ENDS_WIT [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Selections {
+            get {
+                return ResourceManager.GetString("Selections", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (function () {
+        ///    let _eval = window.eval;
+        ///    window.eval = function (jsString) {
+        ///        if (jsString.indexOf(&quot;\n//# logErrors&quot;) &gt;= 0) {
+        ///            try {
+        ///                return _eval(jsString);
+        ///            }
+        ///            catch (ex) {
+        ///                console.error(ex);
+        ///            }
+        ///        }
+        ///        else {
+        ///            return _eval(jsString);
+        ///        }
+        ///    };
+        ///})();.
+        /// </summary>
+        internal static string Shim {
+            get {
+                return ResourceManager.GetString("Shim", resourceCulture);
             }
         }
     }

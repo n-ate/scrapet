@@ -13,8 +13,16 @@ namespace Scrapet
         {
             if (sender is WebView view)
             {
-                var value = await view.EvaluateJavaScriptAsync(Scripts.Selection);
+                _ = await view.InjectMultilineScript(nameof(Scripts.Shim), Scripts.Shim);
+                _ = await view.InjectMultilineScript(nameof(Scripts.Namespace), Scripts.Namespace);
+                _ = await view.InjectAndRegisterMultilineScript(nameof(Scripts.Selections), Scripts.Selections);
+                _ = await view.InjectAndRegisterMultilineScript(nameof(Scripts.Events), Scripts.Events);
             }
+        }
+
+        private void WebView_Navigating(object sender, WebNavigatingEventArgs e)
+        {
+            if (sender is WebView view) view.TryOpenDevToolsWindow();
         }
     }
 }

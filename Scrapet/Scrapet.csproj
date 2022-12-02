@@ -50,6 +50,28 @@
     </ItemGroup>
 
     <ItemGroup>
+      <None Remove="Resources\Scripts\events.js" />
+      <None Remove="Resources\Scripts\namespace.js" />
+      <None Remove="Resources\Scripts\selections.js" />
+      <None Remove="Resources\Scripts\shim.js" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Resources\Scripts\events.js">
+        <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      </Content>
+      <Content Include="Resources\Scripts\shim.js">
+        <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      </Content>
+      <Content Include="Resources\Scripts\namespace.js">
+        <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      </Content>
+      <Content Include="Resources\Scripts\selections.js">
+        <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
     </ItemGroup>
 
